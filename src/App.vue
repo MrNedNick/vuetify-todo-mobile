@@ -1,10 +1,10 @@
 <template>
   <v-app id="inspire">
 
-    <v-navigation-drawer 
+    <v-navigation-drawer
       v-model="drawer"
       app
-      >
+    >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
@@ -40,10 +40,10 @@
     </v-navigation-drawer>
 
     <v-app-bar
-      app
       color="primary"
-      dark
       src="clouds.png"
+      app
+      dark
       prominent
     >
       <template v-slot:img="{ props }">
