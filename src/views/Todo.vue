@@ -9,7 +9,8 @@
       label="Add Task"
       append-icon="mdi-plus"
       hide-details
-      clearable/>
+      clearable
+    />
 
     <v-list
       v-if="$store.state.tasks.length"
@@ -67,13 +68,8 @@ export default {
     };
   },
   methods: {
-    addTask(){
-      let newTask = {
-        id: Date.now(),
-        title: this.newTaskTitle,
-        done:false
-      }
-      this.tasks.push(newTask)
+    addTask() {
+      this.$store.commit('addTask', this.newTaskTitle)
       this.newTaskTitle = ''
     },
     doneTask(id){
