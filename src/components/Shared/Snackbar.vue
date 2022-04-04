@@ -5,8 +5,7 @@
     <template v-slot:action="{ attrs }">
       <v-btn
         v-bind="attrs"
-        @click="snackbar = false"
-        color="pink"
+        @click="$store.commit('hideSnackbar')"
         text
       >
         Close
