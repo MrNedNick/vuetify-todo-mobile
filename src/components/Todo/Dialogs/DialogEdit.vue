@@ -10,7 +10,7 @@
         </v-card-title>
         <v-card-text>
             Edit the title of this task:
-            <v-text-field />
+            <v-text-field v-model="taskTitle"/>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -34,7 +34,15 @@
 
 <script>
 export default {
-    props: ['task']
+    props: ['task'],
+    data() {
+      return {
+        taskTitle: null
+      }
+    },
+    mounted() {
+      this.taskTitle = this.task.title
+    }
 }
 </script>
 
