@@ -18,8 +18,9 @@
 
     <v-list>
         <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
+          v-for="(item, index) in items"
+          :key="index"
+          @click="handleClick(index)"
         >
           <v-list-item-icon>
             <v-icon v-text="item.icon"></v-icon>
@@ -36,18 +37,32 @@ export default {
         items: [
             { 
                 title: 'Edit',
-                icon: 'mdi-pencil'
+                icon: 'mdi-pencil',
+                click(){
+                    console.log('edit')
+                }
             },
             { 
                 title: 'Due date',
-                icon: 'mdi-calendar' 
+                icon: 'mdi-calendar',
+                click(){
+                    console.log('date')
+                } 
             },
             { 
                 title: 'Delete',
-                icon: 'mdi-delete'
+                icon: 'mdi-delete',
+                click(){
+                    console.log('delete')
+                }
             },
         ],
     }),
+    methods: {
+        handleClick(index){
+            this.items[index].click()
+        }
+    }
 };
 </script>
 
