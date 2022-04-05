@@ -22,7 +22,7 @@
           <v-btn
             color="red darken-1"
             text
-            @click="dialog = false"
+            @click="$store.dispatch('deleteTask', task.id)"
           >
             Yes
           </v-btn>
@@ -33,7 +33,7 @@
 
 <script>
 export default {
-
+    props: ['task']
 }
 </script>
 
