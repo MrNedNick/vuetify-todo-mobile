@@ -15,7 +15,7 @@
           <v-spacer></v-spacer>
           <v-btn
             text
-            @click="dialog = false"
+            @click="$emit('close')"
           >
             No
           </v-btn>
