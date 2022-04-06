@@ -23,7 +23,7 @@
           <v-btn
             color="red darken-1"
             text
-            @click="$store.dispatch('deleteTask', task.id)"
+            @click="saveTask"
           >
             Save
           </v-btn>
@@ -40,12 +40,18 @@ export default {
         taskTitle: null
       }
     },
+    methods: {
+      saveTask() {
+        let payload = {
+          id: this.task.id,
+          title: this.taskTitle
+        }
+        this.$store.commit('updateTaskTitle', payload)
+      }
+    }
     mounted() {
       this.taskTitle = this.task.title
     }
 }
 </script>
 
-<style>
-
-</style>
