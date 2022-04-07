@@ -1,12 +1,12 @@
 <template>
     <v-text-field
-    class="expanding-search mt-1"
+        class="expanding-search mt-1 closed"
         placeholder="Search"
         prepend-inner-icon="mdi-magnify"
         filled
         dense
         clearable
-    ></v-text-field>
+    />
 </template>
 
 <script>
@@ -19,5 +19,7 @@ export default {
     .expanding-search
         .v-input__slot
             &:before, &:after
-                border-colot: transparent !important
+                border-color: transparent !important
+        &.closed
+            max-width: 45px
 </style>
