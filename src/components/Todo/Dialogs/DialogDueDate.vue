@@ -14,14 +14,14 @@
             <v-btn
                 text
                 color="primary"
-                @click="modal = false"
+                @click="$emit('close')"
             >
                 Cancel
             </v-btn>
             <v-btn
                 text
                 color="primary"
-                @click="$refs.dialog.save(date)"
+                @click="saveTask"
             >
                 OK
             </v-btn>
@@ -35,6 +35,16 @@ export default {
     data() {
         return {
             date: null
+        }
+    },
+    methods: {
+        saveTask() {
+            let payload = {
+                id: this.task.id,
+                dueDate: this.date
+            }
+            this.$store.dispatch('updateTaskDueDate', payload)
+            this.$emit('close')
         }
     },
     mounted() {
