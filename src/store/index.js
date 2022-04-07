@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    search: null,
     tasks: [
       {
         id: 1,
@@ -31,6 +32,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    setSearch(state, value) {
+      state.search = value
+    },
     addTask(state, newTaskTitle){
       let newTask = {
         id: Date.now(),
