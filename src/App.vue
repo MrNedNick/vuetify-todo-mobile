@@ -6,10 +6,18 @@
       app
     >
       <v-img
+      class="pa-4"
         height="150"
         src="clouds.png"
         gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
-      />
+      >
+        <v-avatar size="70">
+          <img
+            src="https://cdn.vuetifyjs.com/images/john.jpg"
+            alt="Nick"
+          >
+        </v-avatar>
+      </v-img>
 
       <v-list
         dense
@@ -78,7 +86,7 @@
 
   export default {
     data: () => ({ 
-      drawer: null,
+      drawer: true,
       items: [
           { title: 'Todo', icon: 'mdi-format-list-checks', to: '/' },
           { title: 'About', icon: 'mdi-help-box', to: '/about' },
