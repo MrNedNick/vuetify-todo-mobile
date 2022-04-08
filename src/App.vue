@@ -45,6 +45,7 @@
       app
       dark
       prominent
+      height="150"
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -62,9 +63,12 @@
           <search />
         </v-row>
         <v-row>
-          <v-app-bar-title class="ml-4">
+          <v-toolbar-title class="ml-4 text-h4">
             Vuetify Todo
-          </v-app-bar-title>
+          </v-toolbar-title>
+        </v-row>
+        <v-row>
+          <live-date-time />
         </v-row>
       </v-container>
 
@@ -89,6 +93,7 @@
     }),
     components: {
       'search': require('@/components/Tools/Search.vue').default,
+      'live-date-time': require('@/components/Tools/LiveDateTime.vue').default,
       'snackbar': require('@/components/Shared/Snackbar.vue').default
     }
   }
