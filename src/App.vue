@@ -6,17 +6,23 @@
       app
     >
       <v-img
-      class="pa-4"
+      class="pa-4 pt-7"
         height="150"
         src="clouds.png"
         gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
       >
-        <v-avatar size="70">
+        <v-avatar size="70" class="mb-2">
           <img
             src="https://cdn.vuetifyjs.com/images/john.jpg"
             alt="Nick"
           >
         </v-avatar>
+        <div class="white--text text-subtitle-1 font-weight-bold">
+          Nick Nick
+        </div>
+        <div class="white--text text-subtitle-2">
+          nick__nick
+        </div>
       </v-img>
 
       <v-list
@@ -86,7 +92,7 @@
 
   export default {
     data: () => ({ 
-      drawer: true,
+      drawer: null,
       items: [
           { title: 'Todo', icon: 'mdi-format-list-checks', to: '/' },
           { title: 'About', icon: 'mdi-help-box', to: '/about' },
