@@ -5,18 +5,11 @@
       v-model="drawer"
       app
     >
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Vuetify Todo
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Best Todo
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
+      <v-img
+        height="150"
+        src="clouds.png"
+        gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+      />
 
       <v-list
         dense
