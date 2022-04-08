@@ -3,25 +3,26 @@
 
     <v-navigation-drawer
       v-model="drawer"
+      :mobile-breakpoint="768"
       app
     >
       <v-img
-      class="pa-4 pt-7"
+      class="pa-4"
         height="150"
         src="clouds.png"
         gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
       >
         <v-avatar size="70" class="mb-2">
           <img
-            src="https://cdn.vuetifyjs.com/images/john.jpg"
+            src="Nick-logo.png"
             alt="Nick"
           >
         </v-avatar>
         <div class="white--text text-subtitle-1 font-weight-bold">
-          Nick Nick
+          Nick Ned
         </div>
         <div class="white--text text-subtitle-2">
-          nick__nick
+          MrNedNick
         </div>
       </v-img>
 
@@ -61,7 +62,7 @@
         ></v-img>
       </template>
 
-      <v-container class="pa-0">
+      <v-container class="header-container pa-0">
         <v-row>
           <v-app-bar-nav-icon 
             @click="drawer = !drawer" 
@@ -105,3 +106,8 @@
     }
   }
 </script>
+
+<style lang="sass">
+  .header-container
+    max-width: none !important
+</style>
