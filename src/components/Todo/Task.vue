@@ -25,7 +25,18 @@
         </v-list-item-action>
 
         <v-list-item-action>
-          <task-menu :task="task"/>
+          <task-menu :task="task" />
+        </v-list-item-action>
+
+        <v-list-item-action
+          v-if="$store.state.sorting"
+        >
+          <v-btn
+            color="primary"
+            icon
+          >
+            <v-icon>mdi-drag-horizontal-variant</v-icon>
+          </v-btn>
         </v-list-item-action>
       </template>
     </v-list-item>
@@ -34,17 +45,17 @@
 </template>
 
 <script>
-import { format } from 'date-fns'
+import { format } from "date-fns";
 
 export default {
-    props: ['task'],
-    filters: {
-      niceDate(value){
-        return format(new Date(value), 'MMM d')
-      }
+  props: ["task"],
+  filters: {
+    niceDate(value) {
+      return format(new Date(value), "MMM d");
     },
-    components: {
-      'task-menu': require('@/components/Todo/TaskMenu.vue').default
-    }
+  },
+  components: {
+    "task-menu": require("@/components/Todo/TaskMenu.vue").default,
+  },
 };
 </script>
