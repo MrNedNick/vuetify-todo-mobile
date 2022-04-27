@@ -33,6 +33,7 @@
         >
           <v-btn
             color="primary"
+            class="handle"
             icon
           >
             <v-icon>mdi-drag-horizontal-variant</v-icon>
