@@ -72,7 +72,7 @@
         </v-row>
         <v-row>
           <v-toolbar-title class="ml-4 text-h4">
-            Vuetify Todo
+            {{ appTitle }}
           </v-toolbar-title>
         </v-row>
         <v-row>
@@ -99,6 +99,11 @@
           { title: 'About', icon: 'mdi-help-box', to: '/about' },
         ],
     }),
+    computed: {
+      appTitle() {
+        return process.env.VUE_APP_TITLE
+      }
+    },
     components: {
       'search': require('@/components/Tools/Search.vue').default,
       'live-date-time': require('@/components/Tools/LiveDateTime.vue').default,
