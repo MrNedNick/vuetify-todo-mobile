@@ -3,6 +3,7 @@
     <v-list-item
       :class="{ 'blue lighten-5': task.done }"
       @click="$store.commit('doneTask', task.id)"
+      :ripple="false"
     >
       <template v-slot:default>
         <v-list-item-action>
