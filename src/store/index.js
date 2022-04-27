@@ -74,6 +74,9 @@ export default new Vuex.Store({
     },
     hideSnackbar(state){
       state.snackbar.show = false
+    },
+    toggleSorting(state) {
+      state.sorting = !state.sorting
     }
   },
   actions: {
