@@ -92,6 +92,14 @@ export default new Vuex.Store({
         commit('showSnackbar', 'Task added!')
       })
     },
+    doneTask({ state, commit }, id){
+      let task = state.tasks.filter(task => task.id === id)[0]
+      db.collection('tasks').doc({ id: id }).update({
+        done: !task.done
+      }).then(() => {
+        commit('doneTask', id)
+      })
+    },
     deleteTask({ commit }, id) {
       commit('deleteTask', id)
       commit('showSnackbar', 'Task deleted!')
