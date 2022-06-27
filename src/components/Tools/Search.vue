@@ -6,6 +6,7 @@
         @blur="searchClosed = true"
         class="expanding-search mt-1"
         :class="{ 'closed' : searchClosed && !$store.state.search}"
+        :disabled="$store.state.sorting"
         placeholder="Search"
         prepend-inner-icon="mdi-magnify"
         filled
