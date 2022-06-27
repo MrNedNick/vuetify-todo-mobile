@@ -1,6 +1,5 @@
 <template>
   <v-app id="inspire">
-
     <v-navigation-drawer
       v-model="drawer"
       :mobile-breakpoint="768"
@@ -39,7 +38,6 @@
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
@@ -83,7 +81,7 @@
         </v-row>
       </v-container>
     </v-app-bar>
-    
+
     <v-main>
       <router-view></router-view>
       <snackbar />
