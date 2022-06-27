@@ -78,7 +78,6 @@
         </v-row>
       </v-container>
     </v-app-bar>
-    
     <v-main>
       <router-view></router-view>
       <snackbar />
