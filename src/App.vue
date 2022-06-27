@@ -24,7 +24,6 @@
           MrNedNick
         </div>
       </v-img>
-
       <v-list
         dense
         nav
@@ -44,7 +43,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
     <v-app-bar
       color="primary"
       src="clouds.png"
@@ -59,7 +57,6 @@
           gradient="to top right, rgba(19,84,122,.9), rgba(128,208,199,.9)"
         ></v-img>
       </template>
-
       <v-container class="header-container pa-0">
         <v-row>
           <v-app-bar-nav-icon 
@@ -81,7 +78,7 @@
         </v-row>
       </v-container>
     </v-app-bar>
-
+    
     <v-main>
       <router-view></router-view>
       <snackbar />
