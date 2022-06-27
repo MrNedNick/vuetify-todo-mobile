@@ -37,6 +37,7 @@ export default new Vuex.Store({
     },
     sorting: false
   },
+  
   mutations: {
     setSearch(state, value) {
       state.search = value
