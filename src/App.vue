@@ -53,7 +53,7 @@
       app
       dark
       prominent
-      :height="$route.path === '/' ? '220' : '150'"
+      :height="appHeight"
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -102,6 +102,11 @@
           { title: 'About', icon: 'mdi-help-box', to: '/about' },
         ],
     }),
+    computed: {
+      appHeight() {
+        return this.$route.path === '/' ? '220' : '150'
+      }
+    },
     mounted() {
       this.$store.dispatch('getTasks')
     },
